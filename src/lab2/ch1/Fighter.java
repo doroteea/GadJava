@@ -5,8 +5,14 @@ public class Fighter {
         this.name = name;
         this.health = health;
         this.damagePerAttack = damagePerAttack;
+        counter++;
     }
 
+    public static int getCounter() {
+        return counter;
+    }
+
+    private static int counter;
     private String name;
     private int health;
     private int damagePerAttack;

@@ -5,6 +5,7 @@ public class Main {
         Exercises ex = new Exercises();
         ex.arrays();
         System.out.println("Atelier digital Google!");
+
     }
 }
 
