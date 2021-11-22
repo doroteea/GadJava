@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class Main {
 
-    public static void storeContactToFile(String fileName , Contact contact){
+    public static void storeContactToFile(String fileName, Contact contact) {
         try {
             BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(fileName));
         } catch (IOException e) {

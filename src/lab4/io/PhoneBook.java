@@ -29,8 +29,8 @@ public class PhoneBook {
         }
         finally {
             if(s!= null) s.close();}
-
     }
+
 
     private void storeContact(Contact contact){
         if(counter < contacts.length){
