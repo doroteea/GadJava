@@ -1,10 +1,16 @@
 package Project01.observer;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class NewsLetter implements Observable{
 
     Observer[] subscribers = new Observer[0];
+
+    public NewsLetter() {
+    }
+
     @Override
     public void subscribe(Observer obj) {
         int length = subscribers.length+1;
@@ -24,9 +30,10 @@ public class NewsLetter implements Observable{
     }
 
     @Override
-    public void notifySubscribers(String message) {
+    public void notifySubscribers(Article a) {
         for(Observer subscriber : subscribers){
-            subscriber.notify(message);
+                if(subscriber.hasCategory(a.getCategory()))
+                subscriber.notify(a.getTitle());
         }
     }
 }
